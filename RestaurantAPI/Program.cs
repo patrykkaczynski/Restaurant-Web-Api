@@ -1,5 +1,4 @@
 using RestaurantAPI;
-using RestaurantAPI.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,8 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 #endregion
 builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>();
 builder.Services.AddControllers();
-builder.Services.AddDbContext<RestaurantDbContext>();
-builder.Services.AddScoped<RestaurantSeeder>();
 
 var app = builder.Build();
 
@@ -30,11 +27,6 @@ var app = builder.Build();
 // Mo¿liwe jest dodawanie w³asnych middleware lub korzystanie z istniej¹cych
 // Wazna jest kolejnoœæ wywo³ywania tych metod
 #endregion
-
-using var scope = app.Services.CreateScope();
-var seeder = scope.ServiceProvider.GetRequiredService<RestaurantSeeder>();
-
-seeder.Seed();
 
 app.UseHttpsRedirection(); // jeœli klient wyœle zapytanie bez protoko³u https to jego zapytanie zostanie automatycznie przekierowane na adres z protoko³em https
 
