@@ -1,15 +1,11 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using RestaurantAPI.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
 using RestaurantAPI.Models;
 using RestaurantAPI.Services;
 
 namespace RestaurantAPI.Controllers
 {
     [Route("api/restaurant")]
+    [ApiController]
     public class RestaurantController : ControllerBase
     {
         private readonly IRestaurantService _restaurantService;
@@ -22,17 +18,16 @@ namespace RestaurantAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> Update([FromRoute] int id, [FromBody] UpdateRestaurantDto dto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            #region ModelState
+            //jesli do akcji przyjdzie jakiekolwiek zapytanie dla ktorego istnieje walidacja modelu za pomocą atrybutu ApiController,
+            //to kod poniżej zostanie wywołany automatycznie, przez co można pozbyć się z akcji
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+            #endregion
 
-            var isUpdated = await _restaurantService.Update(id, dto);
-
-            if (!isUpdated)
-            {
-                return NotFound();
-            }
+            await _restaurantService.Update(id, dto);
 
             return Ok();
         }
@@ -40,12 +35,7 @@ namespace RestaurantAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete([FromRoute] int id)
         {
-            var isDeleted = await _restaurantService.Delete(id);
-
-            if (isDeleted)
-            {
-                return NoContent();
-            }
+            await _restaurantService.Delete(id);
 
             return NotFound();
         }
@@ -54,10 +44,6 @@ namespace RestaurantAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
-            if(!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
 
             var id = await _restaurantService.Create(dto);
 
@@ -76,11 +62,6 @@ namespace RestaurantAPI.Controllers
         public async Task<ActionResult<RestaurantDto>> Get([FromRoute] int id)
         {
             var restaurant = await _restaurantService.GetById(id);
-
-            if (restaurant is null)
-            {
-                return NotFound();
-            }
 
             return Ok(restaurant);
         }

@@ -1,4 +1,9 @@
+using NLog.Web;
 using RestaurantAPI;
+using RestaurantAPI.Entities;
+using RestaurantAPI.Middleware;
+using RestaurantAPI.Services;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +15,23 @@ var builder = WebApplication.CreateBuilder(args);
 // Ka¿da z tych trzech metod przyjmuje dwa typy generyczne. Pierwszym z nich jest typ abstrakcji na któr¹ trzeba zarejestrowaæ konkretn¹ implementacjê
 // Przez tak¹ rejestracjê wbudowany kontener zale¿noœci na podstawie wstrzykniêtego typu abstrakcji bêdzie w stanie automatycznie utworzyæ nowy obiekt konkretnej klasy która zawiera dan¹ implementacjê
 // Dziêki DI pozbywamy siê silnej zale¿noœci pomiêdzy klasami, dziêki czemu pisz¹c testy dla danej klasy bez problemu mo¿na zamokowaæ dany interfejs po to aby zwróciæ konkretne wyniki
+
+//builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+
 #endregion
-builder.Services.AddTransient<IWeatherForecastService, WeatherForecastService>();
+
+// NLog: Setup NLog for Dependency injection
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
+
 builder.Services.AddControllers();
+builder.Services.AddDbContext<RestaurantDbContext>();
+builder.Services.AddScoped<RestaurantSeeder>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+builder.Services.AddScoped<ErrorHandlingMiddleware>();
+builder.Services.AddScoped<RequestTimeMiddleware>();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -27,8 +46,21 @@ var app = builder.Build();
 // Mo¿liwe jest dodawanie w³asnych middleware lub korzystanie z istniej¹cych
 // Wazna jest kolejnoœæ wywo³ywania tych metod
 #endregion
+using var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<RestaurantSeeder>();
+
+seeder.Seed();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<RequestTimeMiddleware>();
 
 app.UseHttpsRedirection(); // jeœli klient wyœle zapytanie bez protoko³u https to jego zapytanie zostanie automatycznie przekierowane na adres z protoko³em https
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant API");
+});
 
 app.MapControllers(); // zapytanie, które zostanie wys³ane przez przegl¹darkê na podany adres zostanie odpowiednio zmapowane do wywo³ania akcji w danym kontrolerze poprzez atrybut Route
 

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
+using RestaurantAPI.Exceptions;
 using RestaurantAPI.Models;
 
 namespace RestaurantAPI.Services
@@ -9,23 +10,23 @@ namespace RestaurantAPI.Services
     {
         private readonly RestaurantDbContext _dbContext;
         private readonly IMapper _mapper;
+        private readonly ILogger<RestaurantService> _logger;
 
-        public RestaurantService(RestaurantDbContext dbContext, IMapper mapper)
+        public RestaurantService(RestaurantDbContext dbContext, IMapper mapper, ILogger<RestaurantService> logger)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _logger = logger;
         }
 
-        public async Task<bool> Update(int id, UpdateRestaurantDto dto)
+        public async Task Update(int id, UpdateRestaurantDto dto)
         {
             var restaurant = await _dbContext
               .Restaurants
               .FirstOrDefaultAsync(r => r.Id == id);
 
             if (restaurant is null)
-            {
-                return false;
-            }
+                throw new NotFoundException("Restaurant not found");
 
             restaurant.Name = dto.Name;
             restaurant.Description = dto.Description;
@@ -33,25 +34,22 @@ namespace RestaurantAPI.Services
 
             await _dbContext.SaveChangesAsync();
 
-            return true;
-
         }
 
-        public async Task<bool> Delete(int id)
+        public async Task Delete(int id)
         {
+            _logger.LogError($"Restaurant with: {id} DELETE action invoked");
+
             var restaurant = await _dbContext
               .Restaurants
               .FirstOrDefaultAsync(r => r.Id == id);
 
             if(restaurant is null)
-            {
-                return false;
-            }
+                throw new NotFoundException("Restaurant not found");
 
             _dbContext.Restaurants.Remove(restaurant);
             await _dbContext.SaveChangesAsync();
 
-            return true;
 
         }
 
@@ -64,9 +62,7 @@ namespace RestaurantAPI.Services
                .FirstOrDefaultAsync(r => r.Id == id);
 
             if (restaurant is null)
-            {
-                return null;
-            }
+                throw new NotFoundException("Restaurant not found");
 
             var result = _mapper.Map<RestaurantDto>(restaurant);
 
