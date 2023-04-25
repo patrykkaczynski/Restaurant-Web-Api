@@ -27,7 +27,7 @@ namespace RestaurantAPI.Controllers
             //}
             #endregion
 
-            await _restaurantService.Update(id, dto);
+            await _restaurantService.UpdateAsync(id, dto);
 
             return Ok();
         }
@@ -35,9 +35,9 @@ namespace RestaurantAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete([FromRoute] int id)
         {
-            await _restaurantService.Delete(id);
+            await _restaurantService.DeleteAsync(id);
 
-            return NotFound();
+            return NoContent();
         }
 
 
@@ -45,7 +45,7 @@ namespace RestaurantAPI.Controllers
         public async Task<ActionResult> CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
 
-            var id = await _restaurantService.Create(dto);
+            var id = await _restaurantService.CreateAsync(dto);
 
             return Created($"/api/restaurant/{id}", null);
         }
@@ -53,7 +53,7 @@ namespace RestaurantAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
         {
-            var restaurantDtos = await _restaurantService.GetAll();
+            var restaurantDtos = await _restaurantService.GetAllAsync();
 
             return Ok(restaurantDtos);
         }
@@ -61,7 +61,7 @@ namespace RestaurantAPI.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<RestaurantDto>> Get([FromRoute] int id)
         {
-            var restaurant = await _restaurantService.GetById(id);
+            var restaurant = await _restaurantService.GetByIdAsync(id);
 
             return Ok(restaurant);
         }

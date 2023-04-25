@@ -4,10 +4,10 @@ namespace RestaurantAPI.Services
 {
     public interface IDishService
     {
-        Task<int> Create(int restaurantId, CreateDishDto dto);
-        Task<DishDto> GetById(int restaurantId, int dishId);
-        Task<List<DishDto>> GetAll(int restaurantId);
-        Task RemoveAll(int restaurantId);
-        Task RemoveById(int restaurantId, int dishId);
+        Task<int> CreateAsync(int restaurantId, CreateDishDto dto);
+        Task<DishDto> GetByIdAsync(int restaurantId, int dishId);
+        Task<List<DishDto>> GetAllAsync(int restaurantId);
+        Task RemoveAllAsync(int restaurantId);
+        Task RemoveByIdAsync(int restaurantId, int dishId);
     }
 }

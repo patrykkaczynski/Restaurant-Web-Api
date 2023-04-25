@@ -17,7 +17,7 @@ namespace RestaurantAPI.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromRoute] int restaurantId, [FromBody] CreateDishDto dto)
         {
-            var newDishId = await _dishService.Create(restaurantId, dto);
+            var newDishId = await _dishService.CreateAsync(restaurantId, dto);
 
             return Created($"api/restaurant/{restaurantId}/dish/{newDishId}", null);
         }
@@ -26,7 +26,7 @@ namespace RestaurantAPI.Controllers
         [HttpGet("{dishId}")]
         public async Task<ActionResult<DishDto>> Get([FromRoute] int restaurantId, [FromRoute] int dishId)
         {
-            var dish = await _dishService.GetById(restaurantId, dishId);
+            var dish = await _dishService.GetByIdAsync(restaurantId, dishId);
 
             return Ok(dish);
         }
@@ -34,7 +34,7 @@ namespace RestaurantAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<DishDto>> GetAll([FromRoute] int restaurantId, [FromRoute] int dishId)
         {
-            var result = await _dishService.GetAll(restaurantId);
+            var result = await _dishService.GetAllAsync(restaurantId);
 
             return Ok(result);
         }
@@ -42,7 +42,7 @@ namespace RestaurantAPI.Controllers
         [HttpDelete]
         public async Task<ActionResult> Delete([FromRoute] int restaurantId)
         {
-            await _dishService.RemoveAll(restaurantId);
+            await _dishService.RemoveAllAsync(restaurantId);
 
             return NoContent();
         }
@@ -51,7 +51,7 @@ namespace RestaurantAPI.Controllers
         [HttpDelete("{dishId}")]
         public async Task<ActionResult> DeleteById([FromRoute] int restaurantId, [FromRoute] int dishId)
         {
-            await _dishService.RemoveById(restaurantId, dishId);
+            await _dishService.RemoveByIdAsync(restaurantId, dishId);
 
             return NoContent();
         }

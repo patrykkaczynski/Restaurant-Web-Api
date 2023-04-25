@@ -16,9 +16,9 @@ namespace RestaurantAPI.Services
             _context = context;
             _mapper = mapper;
         }
-        public async Task<int> Create(int restaurantId, CreateDishDto dto)
+        public async Task<int> CreateAsync(int restaurantId, CreateDishDto dto)
         {
-            var restaurant = await GetRestaurantById(restaurantId);
+            var restaurant = await GetRestaurantByIdAsync(restaurantId);
 
             var dishEntity = _mapper.Map<Dish>(dto);
 
@@ -30,9 +30,9 @@ namespace RestaurantAPI.Services
             return dishEntity.Id;
         }
 
-        public async Task<DishDto> GetById(int restaurantId, int dishId)
+        public async Task<DishDto> GetByIdAsync(int restaurantId, int dishId)
         {
-            var restaurant = await GetRestaurantById(restaurantId);
+            var restaurant = await GetRestaurantByIdAsync(restaurantId);
 
             var dish = await _context.Dishes.FirstOrDefaultAsync(d => d.Id == dishId);
 
@@ -47,26 +47,26 @@ namespace RestaurantAPI.Services
 
         }
 
-        public async Task<List<DishDto>> GetAll(int restaurantId)
+        public async Task<List<DishDto>> GetAllAsync(int restaurantId)
         {
-            var restaurant = await GetRestaurantById(restaurantId);
+            var restaurant = await GetRestaurantByIdAsync(restaurantId);
 
 
             var dishDtos = _mapper.Map<List<DishDto>>(restaurant.Dishes);
 
             return dishDtos;
         }
-        public async Task RemoveAll(int restaurantId)
+        public async Task RemoveAllAsync(int restaurantId)
         {
-            var restaurant = await GetRestaurantById(restaurantId);
+            var restaurant = await GetRestaurantByIdAsync(restaurantId);
 
             _context.RemoveRange(restaurant.Dishes);
             await _context.SaveChangesAsync();
         }
 
-        public async Task RemoveById(int restaurantId, int dishId)
+        public async Task RemoveByIdAsync(int restaurantId, int dishId)
         {
-            var restaurant = await GetRestaurantById(restaurantId);
+            var restaurant = await GetRestaurantByIdAsync(restaurantId);
 
             var dish = await _context.Dishes.FirstOrDefaultAsync(d => d.Id == dishId);
 
@@ -79,7 +79,7 @@ namespace RestaurantAPI.Services
             await _context.SaveChangesAsync();
         }
 
-        private async Task<Restaurant> GetRestaurantById(int restaurantId)
+        private async Task<Restaurant> GetRestaurantByIdAsync(int restaurantId)
         {
             var restaurant = await _context
                .Restaurants

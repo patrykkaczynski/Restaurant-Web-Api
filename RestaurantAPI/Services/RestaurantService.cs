@@ -19,7 +19,7 @@ namespace RestaurantAPI.Services
             _logger = logger;
         }
 
-        public async Task Update(int id, UpdateRestaurantDto dto)
+        public async Task UpdateAsync(int id, UpdateRestaurantDto dto)
         {
             var restaurant = await _dbContext
               .Restaurants
@@ -36,7 +36,7 @@ namespace RestaurantAPI.Services
 
         }
 
-        public async Task Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             _logger.LogError($"Restaurant with: {id} DELETE action invoked");
 
@@ -53,7 +53,7 @@ namespace RestaurantAPI.Services
 
         }
 
-        public async Task<RestaurantDto> GetById(int id)
+        public async Task<RestaurantDto> GetByIdAsync(int id)
         {
             var restaurant = await _dbContext
                .Restaurants
@@ -69,7 +69,7 @@ namespace RestaurantAPI.Services
             return result;
         }
 
-        public async Task<IEnumerable<RestaurantDto>> GetAll()
+        public async Task<IEnumerable<RestaurantDto>> GetAllAsync()
         {
             var restaurants = await _dbContext
                .Restaurants
@@ -91,7 +91,7 @@ namespace RestaurantAPI.Services
             return restaurantDtos;
         }
 
-        public async Task<int> Create(CreateRestaurantDto dto)
+        public async Task<int> CreateAsync(CreateRestaurantDto dto)
         {
             var restaurant = _mapper.Map<Restaurant>(dto);
             await _dbContext.Restaurants.AddAsync(restaurant);
