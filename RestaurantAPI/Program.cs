@@ -1,9 +1,11 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using NLog.Web;
 using RestaurantAPI;
+using RestaurantAPI.Authorization;
 using RestaurantAPI.Entities;
 using RestaurantAPI.Middleware;
 using RestaurantAPI.Models;
@@ -51,11 +53,26 @@ builder.Services.AddAuthentication(option =>
 
 });
 
+// Authorization Settings
+builder.Services.AddAuthorization(options =>
+{
+    #region Policy which requires to add nationality during user registration
+    //options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality"));
+    #endregion
+
+    // Policy which requires to add nationality during user registration with specified nationality name
+    options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish"));
+
+    // Custom Policy for Age
+    options.AddPolicy("Atleast20", builder => builder.AddRequirements(new MinimumAgeRequirement(20)));
+});
+
 
 // NLog: Setup NLog for Dependency injection
 builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 
+builder.Services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RestaurantDbContext>();
 builder.Services.AddScoped<RestaurantSeeder>();
@@ -91,7 +108,6 @@ seeder.Seed();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<RequestTimeMiddleware>();
 app.UseAuthentication(); // ka¿dy request wys³any przez klienta API bêdzie podlega³ uwierzytelnieniu
-app.UseAuthorization();
 
 app.UseHttpsRedirection(); // jeœli klient wyœle zapytanie bez protoko³u https to jego zapytanie zostanie automatycznie przekierowane na adres z protoko³em https
 
@@ -100,6 +116,8 @@ app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant API");
 });
+app.UseRouting();
+app.UseAuthorization();
 
 app.MapControllers(); // zapytanie, które zostanie wys³ane przez przegl¹darkê na podany adres zostanie odpowiednio zmapowane do wywo³ania akcji w danym kontrolerze poprzez atrybut Route
 
