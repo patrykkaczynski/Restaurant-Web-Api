@@ -65,6 +65,9 @@ builder.Services.AddAuthorization(options =>
 
     // Custom Policy for Age
     options.AddPolicy("Atleast20", builder => builder.AddRequirements(new MinimumAgeRequirement(20)));
+
+    // Custom Policy for users who created at least 2 restaurants
+    options.AddPolicy("CreatedAtleast2Restaurants", builder => builder.AddRequirements(new CreatedMultipleRestaurantsRequirement(2)));
 });
 
 
@@ -72,7 +75,9 @@ builder.Services.AddAuthorization(options =>
 builder.Logging.ClearProviders();
 builder.Host.UseNLog();
 
+builder.Services.AddScoped<IAuthorizationHandler, CreatedMultipleRestaurantsRequirementHandler>();
 builder.Services.AddScoped<IAuthorizationHandler, MinimumAgeRequirementHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, ResourceOperationRequirementHandler>();
 builder.Services.AddControllers();
 builder.Services.AddDbContext<RestaurantDbContext>();
 builder.Services.AddScoped<RestaurantSeeder>();
@@ -85,6 +90,8 @@ builder.Services.AddScoped<IValidator<RegisterUserDto>, RegisterUserDtoValidator
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
+builder.Services.AddScoped<IUserContextService, UserContextService>();
+builder.Services.AddHttpContextAccessor(); // dziêki temu mo¿liwe jest wstrzykniêcie IHttpContextAccessor do klasy UserContextService
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();

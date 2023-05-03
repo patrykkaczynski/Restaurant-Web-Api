@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RestaurantAPI.Models;
 using RestaurantAPI.Services;
+using System.Security.Claims;
 
 namespace RestaurantAPI.Controllers
 {
@@ -47,14 +48,14 @@ namespace RestaurantAPI.Controllers
         [Authorize(Roles = "Admin,Manager")]
         public async Task<ActionResult> CreateRestaurant([FromBody] CreateRestaurantDto dto)
         {
-
             var id = await _restaurantService.CreateAsync(dto);
 
             return Created($"/api/restaurant/{id}", null);
         }
 
         [HttpGet]
-        [Authorize(Policy = "Atleast20")]
+        [Authorize(Policy = "CreatedAtleast2Restaurants")]
+        //[Authorize(Policy = "Atleast20")]
         //[Authorize(Policy = "HasNationality")]
         public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
         {

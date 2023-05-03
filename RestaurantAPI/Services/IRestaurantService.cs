@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RestaurantAPI.Entities;
 using RestaurantAPI.Models;
+using System.Security.Claims;
 
 namespace RestaurantAPI.Services
 {

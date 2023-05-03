@@ -17,6 +17,7 @@ namespace RestaurantAPI.Authorization
             var userEmail = context.User.FindFirst(c => c.Type == ClaimTypes.Name).Value;
 
             _logger.LogInformation($"User: {userEmail} with date of birth: [{dateOfBirth}]");
+
             if(dateOfBirth.AddYears(requirement.MinimumAge) <= DateTime.Today)
             {
                 _logger.LogInformation("Authorization succeeded");
