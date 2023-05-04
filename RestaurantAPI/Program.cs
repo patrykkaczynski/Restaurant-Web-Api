@@ -112,6 +112,9 @@ var seeder = scope.ServiceProvider.GetRequiredService<RestaurantSeeder>();
 
 seeder.Seed();
 
+var dbContext = scope.ServiceProvider.GetRequiredService<RestaurantDbContext>();
+DataGenerator.Seed(dbContext);
+
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<RequestTimeMiddleware>();
 app.UseAuthentication(); // ka¿dy request wys³any przez klienta API bêdzie podlega³ uwierzytelnieniu

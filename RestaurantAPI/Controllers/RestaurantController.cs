@@ -57,9 +57,9 @@ namespace RestaurantAPI.Controllers
         [Authorize(Policy = "CreatedAtleast2Restaurants")]
         //[Authorize(Policy = "Atleast20")]
         //[Authorize(Policy = "HasNationality")]
-        public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll()
+        public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll([FromQuery]string searchPhrase)
         {
-            var restaurantDtos = await _restaurantService.GetAllAsync();
+            var restaurantDtos = await _restaurantService.GetAllAsync(searchPhrase);
 
             return Ok(restaurantDtos);
         }

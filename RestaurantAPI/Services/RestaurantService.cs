@@ -92,12 +92,14 @@ namespace RestaurantAPI.Services
             return result;
         }
 
-        public async Task<IEnumerable<RestaurantDto>> GetAllAsync()
+        public async Task<IEnumerable<RestaurantDto>> GetAllAsync(string searchPhrase)
         {
             var restaurants = await _dbContext
                .Restaurants
                .Include(r => r.Address)
                .Include(r => r.Dishes)
+               .Where(r => searchPhrase == null || (r.Name.ToLower().Contains(searchPhrase.ToLower()) 
+                                                    || r.Description.ToLower().Contains(searchPhrase.ToLower())))
                .ToListAsync();
 
             #region Mapping By Select
