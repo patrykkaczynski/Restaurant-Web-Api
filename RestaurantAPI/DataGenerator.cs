@@ -28,7 +28,7 @@ namespace RestaurantAPI
                 .RuleFor(r => r.CreatedById, f => f.Random.Int(1, 20))
                 .RuleFor(r => r.Address, f => addressGenerator.Generate())
                 //.RuleFor(r => r.Dishes, f => dishes.OrderBy(x => Random.Shared.Next()).Take(5).ToList());
-                .RuleFor(r => r.Dishes, f => f.Random.ListItems(dishes, 5));
+                .RuleFor(r => r.Dishes, f =>  f.Random.ListItems(dishes,5).Select(d => d.ShallowCopy()).ToList());
         
             var restaurants = restaurantGenerator.Generate(100);
 
