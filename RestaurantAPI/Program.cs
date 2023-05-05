@@ -12,7 +12,6 @@ using RestaurantAPI.Models;
 using RestaurantAPI.Services;
 using RestaurantAPI.Validators;
 using System.Reflection;
-using System.Runtime;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -94,6 +93,15 @@ builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddHttpContextAccessor(); // dziêki temu mo¿liwe jest wstrzykniêcie IHttpContextAccessor do klasy UserContextService
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontEndClient", policyBuilder =>
+
+        policyBuilder.AllowAnyMethod()
+        .AllowAnyHeader()
+        .WithOrigins(builder.Configuration["AllowedOrigins"])
+    );
+});
 
 var app = builder.Build();
 
@@ -116,6 +124,9 @@ seeder.Seed();
 var dbContext = scope.ServiceProvider.GetRequiredService<RestaurantDbContext>();
 DataGenerator.Seed(dbContext);
 
+app.UseResponseCaching();
+app.UseStaticFiles();
+app.UseCors("FrontEndClient");
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<RequestTimeMiddleware>();
 app.UseAuthentication(); // ka¿dy request wys³any przez klienta API bêdzie podlega³ uwierzytelnieniu
