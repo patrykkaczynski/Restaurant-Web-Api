@@ -1,8 +1,10 @@
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using NLog.Web;
 using RestaurantAPI;
 using RestaurantAPI.Authorization;
@@ -92,7 +94,44 @@ builder.Services.AddScoped<ErrorHandlingMiddleware>();
 builder.Services.AddScoped<RequestTimeMiddleware>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddHttpContextAccessor(); // dziêki temu mo¿liwe jest wstrzykniêcie IHttpContextAccessor do klasy UserContextService
-builder.Services.AddSwaggerGen();
+
+// Swagger Configuration
+builder.Services.AddSwaggerGen(options =>
+{
+    // Adding of authorization feature. This feature consists of an "Autorize" button at the top of the page
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+    {
+        Name = "Authorization",
+        Description = "Enter the Bearer Authorization string as following: `Bearer Generated-JWT-Token`",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer"
+    });
+
+    // AddSecurityRequirement extension method will add an authorization header to each endpoint when the request is sent
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Name = "Bearer", 
+                In = ParameterLocation.Header,
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            new List<string>()
+
+        }
+    });
+    
+});
+
+builder.Services.AddFluentValidationRulesToSwagger();
+
+// CORS Configuration
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("FrontEndClient", policyBuilder =>
@@ -121,8 +160,8 @@ var seeder = scope.ServiceProvider.GetRequiredService<RestaurantSeeder>();
 
 seeder.Seed();
 
-var dbContext = scope.ServiceProvider.GetRequiredService<RestaurantDbContext>();
-DataGenerator.Seed(dbContext);
+//var dbContext = scope.ServiceProvider.GetRequiredService<RestaurantDbContext>();
+//DataGenerator.Seed(dbContext);
 
 app.UseResponseCaching();
 app.UseStaticFiles();
@@ -137,6 +176,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Restaurant API");
+    
 });
 app.UseRouting();
 app.UseAuthorization();
