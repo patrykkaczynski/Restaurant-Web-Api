@@ -166,11 +166,11 @@ seeder.Seed();
 app.UseResponseCaching();
 app.UseStaticFiles();
 app.UseCors("FrontEndClient");
+app.UseDeveloperExceptionPage();
 app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseMiddleware<RequestTimeMiddleware>();
 app.UseAuthentication(); // ka¿dy request wys³any przez klienta API bêdzie podlega³ uwierzytelnieniu
 
-app.UseDeveloperExceptionPage();
 
 app.UseHttpsRedirection(); // jeœli klient wyœle zapytanie bez protoko³u https to jego zapytanie zostanie automatycznie przekierowane na adres z protoko³em https
 
