@@ -32,7 +32,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> UploadFile([FromForm] IFormFile file)
+        public async Task<ActionResult> UploadFile(/*[FromForm]*/ IFormFile file)
         {
             if (file != null && file.Length > 0)
             {

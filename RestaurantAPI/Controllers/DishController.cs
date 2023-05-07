@@ -32,7 +32,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<DishDto>> GetAll([FromRoute] int restaurantId, [FromRoute] int dishId)
+        public async Task<ActionResult<DishDto>> GetAll([FromRoute] int restaurantId)
         {
             var result = await _dishService.GetAllAsync(restaurantId);
 
