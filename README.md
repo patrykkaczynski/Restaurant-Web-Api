@@ -2,7 +2,9 @@
 <h1>
 <p align="center">
   <br>Restaurant WebApi 
-  <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="140" height="110">
+  <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="50" height="50">
+  <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/French_Fries.ico" alt="Logo" width="50" height="50">
+  <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="50" height="50">
 </h1>
 </p>
 
