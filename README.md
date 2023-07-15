@@ -10,7 +10,7 @@
 
 <div align="center">
 
-**[PROJECT PHILOSOPHY](https://github.com/chroline/well_app#-project-philosophy) • 
+**[GENERAL INFO](https://github.com/patrykkaczynski/Restaurant-Web-Api#-general-info) • 
 [TECH STACK](https://github.com/chroline/well_app#-tech-stack) • 
 [CONTRIBUTING](https://github.com/chroline/well_app#%EF%B8%8F-contributing) • 
 [SPREAD THE WORD](https://github.com/chroline/well_app#-spread-the-word) • 
@@ -20,7 +20,7 @@
 
 <br />
 
-# 🧐 Project philosophy
+# 🧐 General Info
 
 > The Well app is a mental health and mindfulness app built on top of the science of positive psychology. The Well app is more than just another meditation or journaling app; it encourages you to enhance and reflect on your day with structured, guided activities.
 > 
