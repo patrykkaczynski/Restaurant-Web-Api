@@ -8,16 +8,26 @@
 </h1>
 </p>
 
+<div align="center">
 
+**[PROJECT PHILOSOPHY](https://github.com/chroline/well_app#-project-philosophy) • 
+[TECH STACK](https://github.com/chroline/well_app#-tech-stack) • 
+[CONTRIBUTING](https://github.com/chroline/well_app#%EF%B8%8F-contributing) • 
+[SPREAD THE WORD](https://github.com/chroline/well_app#-spread-the-word) • 
+[LICENSE](https://github.com/chroline/well_app#%EF%B8%8F-license)**
 
-
-
-
-
-<code><img width="50" src="https://user-images.githubusercontent.com/25181517/121405384-444d7300-c95d-11eb-959f-913020d3bf90.png" alt="C#" title="C#"/></code> <code><img width="50" src="https://user-images.githubusercontent.com/25181517/121405754-b4f48f80-c95d-11eb-8893-fc325bde617f.png" alt=".NET Core" title=".NET Core"/></code>
-<div align="left">
-	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/121405384-444d7300-c95d-11eb-959f-913020d3bf90.png" alt="C#" title="C#"/></code>
-	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/121405754-b4f48f80-c95d-11eb-8893-fc325bde617f.png" alt=".NET Core" title=".NET Core"/></code>
 </div>
+
+<br />
+
+# 🧐 Project philosophy
+
+> The Well app is a mental health and mindfulness app built on top of the science of positive psychology. The Well app is more than just another meditation or journaling app; it encourages you to enhance and reflect on your day with structured, guided activities.
+> 
+> There are 5 daily tasks that the Well app asks you to complete each day: record 3 gratitudes, write a journal entry, perform 3 acts of kindness, exercise for 20 minutes, and meditate for 15 minutes.
+
+**Read more about the Well app on [the project homepage](https://projects.colegaw.in/well-app?utm_source=GitHub&utm_medium=readme&utm_campaign=well_app_readme).**
+
+
 
 Web Api created during practical course concerning ASP.NET Core REST Web API
