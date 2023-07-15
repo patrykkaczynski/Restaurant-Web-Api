@@ -11,10 +11,10 @@
 <div align="center">
 
 **[GENERAL INFO](https://github.com/patrykkaczynski/Restaurant-Web-Api#-general-info) • 
-[TECH STACK](https://github.com/chroline/well_app#-tech-stack) • 
-[CONTRIBUTING](https://github.com/chroline/well_app#%EF%B8%8F-contributing) • 
-[SPREAD THE WORD](https://github.com/chroline/well_app#-spread-the-word) • 
-[LICENSE](https://github.com/chroline/well_app#%EF%B8%8F-license)**
+[TECHNOLOGIES USED](https://github.com/patrykkaczynski/Restaurant-Web-Api#-technologies-used) • 
+[FEATURES](https://github.com/patrykkaczynski/Restaurant-Web-Api#-features) • 
+[SCREENSHOTS](https://github.com/patrykkaczynski/Restaurant-Web-Api#-screenshots)) • 
+[SETUP](https://github.com/patrykkaczynski/Restaurant-Web-Api#-setup))**
 
 </div>
 
@@ -29,5 +29,11 @@
 **Read more about the Well app on [the project homepage](https://projects.colegaw.in/well-app?utm_source=GitHub&utm_medium=readme&utm_campaign=well_app_readme).**
 
 
-
+# :information_source: Technologies Used
 Web Api created during practical course concerning ASP.NET Core REST Web API
+
+# 😵‍💫 Features
+
+# Screenshots
+
+# Setup
