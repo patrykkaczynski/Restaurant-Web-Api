@@ -1,8 +1,9 @@
 <br />
 <h1>
 <p align="center">
+  <br>Restaurant WebApi 
   <img src="https://raw.githubusercontent.com/L0garithmic/FastColabCopy/main/img/logo.png" alt="Logo" width="140" height="110">
-  <br>FastColabCopy
+</br>
 </h1>
 </p>
 
