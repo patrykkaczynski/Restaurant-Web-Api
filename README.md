@@ -2,7 +2,7 @@
 <h1>
 <p align="center">
   <br>Restaurant WebApi 
-  <img src="https://raw.githubusercontent.com/L0garithmic/FastColabCopy/main/img/logo.png" alt="Logo" width="140" height="110">
+  <img src="[[https://raw.githubusercontent.com/L0garithmic/FastColabCopy/main/img/logo.png](https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico)](https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico)" alt="Logo" width="140" height="110">
 </h1>
 </p>
 
