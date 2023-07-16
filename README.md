@@ -16,7 +16,7 @@
 
 **[GENERAL INFO](#general-info) • 
 [TECHNOLOGIES USED](#technologies-used) • 
-[FEATURES](#packages-used) • 
+[PACKAGES USED](#packages-used) • 
 [FEATURES](#features) • 
 [SCREENSHOTS](#screenshots) • 
 [SETUP](#setup)**
@@ -34,7 +34,7 @@ The project has been created based on practical course on Udemy platform in orde
 - [Entity Framework Core 7.0](https://github.com/dotnet/efcore)
 - MS SQL Server
 
-# :package: Packages
+# :package: Packages Used
 - [AutoMapper (v12.0.1)](https://github.com/AutoMapper/AutoMapper) -  mapping DTOs (data transfer objects) into domain objects and domain objects into DTOs
 - [FluentValidation (v11.3.0)](https://github.com/FluentValidation/FluentValidation) - validating of input during user registration
 - [NLog (v5.2.3)](https://github.com/NLog/NLog) - logging of messages to files to have a possibility to debug the application in the production environment
