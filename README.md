@@ -16,7 +16,7 @@
 
 **[GENERAL INFO](#information_source-general-info) • 
 [TECHNOLOGIES USED](hammer_and_wrench-technologies-used) • 
-[PACKAGES USED](#package-packages-used) • 
+[PACKAGES USED](#packagepackages-used) • 
 [FEATURES](#gear-features) • 
 [SCREENSHOTS](#Screenshots) • 
 [SETUP](#Setup)**
@@ -45,6 +45,6 @@ The project has been created based on practical course on Udemy platform in orde
 
 # :gear: Features
 
-# Screenshots
+# :camera_flash: Screenshots
 
-# Setup
+# :rocket: Setup
