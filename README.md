@@ -2,10 +2,10 @@
 <h1>
 <p align="center">
   <br>Restaurant WebApi 
+</h1>
   <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="30" height="30">
   <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/French_Fries.ico" alt="Logo" width="30" height="30">
   <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="30" height="30">
-</h1>
 </p>
 <div align="center">
 
@@ -30,14 +30,14 @@ The project has been created based on practical course on Udemy platform in orde
 
 # :package: Packages
 - [AutoMapper (v12.0.1)](https://github.com/AutoMapper/AutoMapper) -  mapping DTOs (data transfer objects) into domain objects and domain objects into DTOs
-- [FluentValidation (v11.3.0)](https://github.com/FluentValidation/FluentValidation) - validation of user input during user registration
-- [NLog (v5.2.3)](https://github.com/NLog/NLog) - logging of messages in the files (it is useful during debugging of the application in the production environment)
-- [Swashbuckle.AspNetCore (v6.5.0)](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master) - swagger tool for documenting application built on ASP.NET Core
+- [FluentValidation (v11.3.0)](https://github.com/FluentValidation/FluentValidation) - validating of input during user registration
+- [NLog (v5.2.3)](https://github.com/NLog/NLog) - logging of messages to files to have a possibility to debug the application in the production environment
+- [Swashbuckle.AspNetCore (v6.5.0)](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master) - using of swagger tool in order to document the application which is built on ASP.NET Core
 - [MicroElements.Swashbuckle.FluentValidation (v5.7.0)](https://github.com/micro-elements/MicroElements.Swashbuckle.FluentValidation) - using of FluentValidation rules instead of ComponentModel attributes to define swagger schema
 - [Bogus (v34.0.2)](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
 
 
-# 😵‍💫 Features
+# :gear: Features
 
 # Screenshots
 
