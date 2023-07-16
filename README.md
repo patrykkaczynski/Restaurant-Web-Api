@@ -7,7 +7,6 @@
   <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="30" height="30">
 </h1>
 </p>
-
 <div align="center">
 
 **[GENERAL INFO](#-general-info) • 
@@ -15,9 +14,7 @@
 [FEATURES](#-features) • 
 [SCREENSHOTS](#-screenshots) • 
 [SETUP](#-setup)**
-
 </div>
-
 <br />
 
 # :information_source: General Info
