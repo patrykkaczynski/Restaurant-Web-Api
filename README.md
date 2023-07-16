@@ -4,11 +4,11 @@
   <br>Restaurant WebApi 
 </p>
 <p align="center">
-    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="40" height="40">
-    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/French_Fries.ico" alt="Logo" width="40" height="40">
-    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="40" height="40">
-    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Slice_Of_Pizza.ico" alt="Logo" width="40" height="40">
-    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Taco.ico" alt="Logo" width="40" height="40">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="50" height="50">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/French_Fries.ico" alt="Logo" width="50" height="50">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="50" height="50">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Slice_Of_Pizza.ico" alt="Logo" width="50" height="50">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Taco.ico" alt="Logo" width="50" height="50">
 </p>  
 </h1>
 </p>
