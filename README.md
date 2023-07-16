@@ -24,10 +24,19 @@ The project has been created based on practical course on Udemy platform in orde
 
 # :hammer_and_wrench: Technologies Used
 - C#
-- .NET 7.0
-- Entity Framework Core
+- ASP.NET Core 7.0
+- Entity Framework Core 7.0
 - MS SQL Server 
- 
+
+# :package: Packages
+- [AutoMapper](https://github.com/AutoMapper/AutoMapper) -  mapping DTOs (data transfer objects) into domain objects and domain objects into DTOs
+- [FluentValidation](https://github.com/FluentValidation/FluentValidation) - validation of user input during user registration
+- [NLog](https://github.com/NLog/NLog) - logging of messages which is useful during debugging of the application in the production environment
+- [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master) - generating of documentation for the application
+- [MicroElements.Swashbuckle.FluentValidation](https://github.com/micro-elements/MicroElements.Swashbuckle.FluentValidation) - using of FluentValidation rules instead of ComponentModel attributes to define swagger schema
+- [Bogus](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
+
+
 # 😵‍💫 Features
 
 # Screenshots
