@@ -17,7 +17,7 @@
 **[GENERAL INFO](#General-Info) • 
 [TECHNOLOGIES USED](#Technologies-Used) • 
 [PACKAGES USED](#Packages-Used) • 
-[FEATURES](#Features) • 
+[FEATURES](#:gear:-Features) • 
 [SCREENSHOTS](#Screenshots) • 
 [SETUP](#Setup)**
 </div>
