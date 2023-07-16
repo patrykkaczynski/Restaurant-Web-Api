@@ -25,9 +25,12 @@ The purpose of the project was to create a web api which enables CRUD (create, r
 
 The project has been created based on pratical course on Udemy platform in order to understand the principle of operation of every web applicatin and what elements it should consist of. The important aspect of learning was integration of the program with database by using Entity Framework Core.
 
-# :information_source: Technologies Used
-Web Api created during practical course concerning ASP.NET Core REST Web API
-
+# :hammer_and_wrench: Technologies Used
+- C#
+- .NET 7.0
+- Entity Framework Core
+- MS SQL Server 
+ 
 # 😵‍💫 Features
 
 # Screenshots
