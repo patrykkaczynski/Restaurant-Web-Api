@@ -15,7 +15,7 @@
 <div align="center">
 
 **[GENERAL INFO](#general-info) • 
-[TECHNOLOGIES USED](#technologies-used) • 
+[TECHNOLOGIES USED](#Technologies-Used) • 
 [PACKAGES USED](#packages-used) • 
 [FEATURES](#features) • 
 [SCREENSHOTS](#screenshots) • 
