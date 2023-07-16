@@ -15,7 +15,7 @@
 <div align="center">
 
 **[GENERAL INFO](#General-Info) • 
-[TECHNOLOGIES USED](#Technologies-Used) • 
+[TECHNOLOGIES USED](https://github.com/patrykkaczynski/Restaurant-Web-Api/blob/main/README.md#Technologies-Used) • 
 [PACKAGES USED](#Packages-Used) • 
 [FEATURES](#Features) • 
 [SCREENSHOTS](#Screenshots) • 
