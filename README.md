@@ -17,7 +17,7 @@
 **[GENERAL INFO](#General-Info) • 
 [TECHNOLOGIES USED](https://github.com/patrykkaczynski/Restaurant-Web-Api/blob/main/README.md#Technologies-Used) • 
 [PACKAGES USED](#Packages-Used) • 
-[FEATURES](#Features) • 
+[FEATURES](#%EF%B8%8F-Features) • 
 [SCREENSHOTS](#Screenshots) • 
 [SETUP](#Setup)**
 </div>
@@ -43,7 +43,7 @@ The project has been created based on practical course on Udemy platform in orde
 - [Bogus (v34.0.2)](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
 
 
-# Features ⚙️
+# ⚙️ Features
 
 # Screenshots
 
