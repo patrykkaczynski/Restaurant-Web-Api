@@ -15,7 +15,7 @@
 <div align="center">
 
 **[GENERAL INFO](#information_source-general-info) • 
-[TECHNOLOGIES USED](hammer_and_wrench-technologies-used) • 
+[TECHNOLOGIES USED](#hammer_and_wrench-technologies-used) • 
 [PACKAGES USED](#packagepackages-used) • 
 [FEATURES](#gear-features) • 
 [SCREENSHOTS](#camera_flash-screenshots) • 
