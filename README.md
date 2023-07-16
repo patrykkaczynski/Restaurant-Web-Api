@@ -14,12 +14,12 @@
 </p>
 <div align="center">
 
-**[GENERAL INFO](#general-info) • 
+**[GENERAL INFO](#General-Info) • 
 [TECHNOLOGIES USED](#Technologies-Used) • 
-[PACKAGES USED](#packages-used) • 
-[FEATURES](#features) • 
-[SCREENSHOTS](#screenshots) • 
-[SETUP](#setup)**
+[PACKAGES USED](#Packages-Used) • 
+[FEATURES](#Features) • 
+[SCREENSHOTS](#Screenshots) • 
+[SETUP](#Setup)**
 </div>
 <br />
 
