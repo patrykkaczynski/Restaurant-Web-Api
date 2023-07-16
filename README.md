@@ -17,7 +17,7 @@
 **[GENERAL INFO](#General-Info) • 
 [TECHNOLOGIES USED](#Technologies-Used) • 
 [PACKAGES USED](#Packages-Used) • 
-[FEATURES](#:gear:-Features) • 
+[FEATURES](#Features) • 
 [SCREENSHOTS](#Screenshots) • 
 [SETUP](#Setup)**
 </div>
@@ -43,7 +43,7 @@ The project has been created based on practical course on Udemy platform in orde
 - [Bogus (v34.0.2)](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
 
 
-# :gear: Features
+# ⚙️ Features
 
 # Screenshots
 
