@@ -10,11 +10,11 @@
 
 <div align="center">
 
-**[GENERAL INFO](https://github.com/patrykkaczynski/Restaurant-Web-Api#-general-info) • 
-[TECHNOLOGIES USED](https://github.com/patrykkaczynski/Restaurant-Web-Api#-technologies-used) • 
-[FEATURES](https://github.com/patrykkaczynski/Restaurant-Web-Api#-features) • 
-[SCREENSHOTS](https://github.com/patrykkaczynski/Restaurant-Web-Api#-screenshots) • 
-[SETUP](https://github.com/patrykkaczynski/Restaurant-Web-Api#-setup)**
+**[GENERAL INFO](#-general-info) • 
+[TECHNOLOGIES USED](#-technologies-used) • 
+[FEATURES](#-features) • 
+[SCREENSHOTS](#-screenshots) • 
+[SETUP](#-setup)**
 
 </div>
 
