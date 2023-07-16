@@ -16,6 +16,7 @@
 
 **[GENERAL INFO](#general-info) • 
 [TECHNOLOGIES USED](#technologies-used) • 
+[FEATURES](#packages-used) • 
 [FEATURES](#features) • 
 [SCREENSHOTS](#screenshots) • 
 [SETUP](#setup)**
