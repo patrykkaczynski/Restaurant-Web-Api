@@ -7,7 +7,8 @@
     <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Hamburger.ico" alt="Logo" width="30" height="30">
     <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/French_Fries.ico" alt="Logo" width="30" height="30">
     <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Green_Salad.ico" alt="Logo" width="30" height="30">
-  <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Pizza.ico" alt="Logo" width="30" height="30">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Slice_Of_Pizza.ico" alt="Logo" width="30" height="30">
+    <img src="https://raw.githubusercontent.com/gildean/foodicon/HEAD/favicons/Taco.ico" alt="Logo" width="30" height="30">
 </p>  
 </h1>
 </p>
