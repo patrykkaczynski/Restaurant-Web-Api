@@ -14,10 +14,10 @@
 </p>
 <div align="center">
 
-**[GENERAL INFO](#General-Info) • 
-[TECHNOLOGIES USED](https://github.com/patrykkaczynski/Restaurant-Web-Api/blob/main/README.md#Technologies-Used) • 
-[PACKAGES USED](#Packages-Used) • 
-[FEATURES](#%EF%B8%8F-Features) • 
+**[GENERAL INFO](#information_source-general-info) • 
+[TECHNOLOGIES USED](hammer_and_wrench-technologies-used) • 
+[PACKAGES USED](#package-packages-used) • 
+[FEATURES](#gear-features) • 
 [SCREENSHOTS](#Screenshots) • 
 [SETUP](#Setup)**
 </div>
@@ -34,7 +34,7 @@ The project has been created based on practical course on Udemy platform in orde
 - [Entity Framework Core 7.0](https://github.com/dotnet/efcore)
 - MS SQL Server
 
-# Packages Used
+# :package:	Packages Used
 - [AutoMapper (v12.0.1)](https://github.com/AutoMapper/AutoMapper) -  mapping DTOs (data transfer objects) into domain objects and domain objects into DTOs
 - [FluentValidation (v11.3.0)](https://github.com/FluentValidation/FluentValidation) - validating of input during user registration
 - [NLog (v5.2.3)](https://github.com/NLog/NLog) - logging of messages to files to have a possibility to debug the application in the production environment
@@ -43,7 +43,7 @@ The project has been created based on practical course on Udemy platform in orde
 - [Bogus (v34.0.2)](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
 
 
-# ⚙️ Features
+# :gear: Features
 
 # Screenshots
 
