@@ -23,16 +23,16 @@ The purpose of the project was to create a web api which enables CRUD (create, r
 The project has been created based on practical course on Udemy platform in order to understand the principle of operation of every web application and what elements it should consist of. The important aspect of learning was integration of the program with database by using Entity Framework Core.
 
 # :hammer_and_wrench: Technologies Used
-- C#
-- ASP.NET Core 7.0
-- Entity Framework Core 7.0
-- MS SQL Server 
+- [C#](https://github.com/dotnet/csharplang)
+- [ASP.NET Core 7.0](https://github.com/dotnet/aspnetcore)
+- [Entity Framework Core 7.0](https://github.com/dotnet/efcore)
+- MS SQL Server
 
 # :package: Packages
 - [AutoMapper](https://github.com/AutoMapper/AutoMapper) -  mapping DTOs (data transfer objects) into domain objects and domain objects into DTOs
 - [FluentValidation](https://github.com/FluentValidation/FluentValidation) - validation of user input during user registration
 - [NLog](https://github.com/NLog/NLog) - logging of messages which is useful during debugging of the application in the production environment
-- [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master) - generating of documentation for the application
+- [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/tree/master) - generating of documentation for the application
 - [MicroElements.Swashbuckle.FluentValidation](https://github.com/micro-elements/MicroElements.Swashbuckle.FluentValidation) - using of FluentValidation rules instead of ComponentModel attributes to define swagger schema
 - [Bogus](https://github.com/bchavez/Bogus) - generating of fake data for restaurants and dishes
 
