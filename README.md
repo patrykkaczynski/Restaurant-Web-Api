@@ -24,7 +24,7 @@
 <br />
 
 # :information_source: General Info
-The purpose of the project was to create a web api which enables CRUD (create, read, update, delete) operations for restaurants and their lists of dishes. The program includes user registration and log-in, handling an authentication process by using JWT token (JSON Web Token) in this way. Every user is authorized based on its role or custom policy in order to check its privileges to specific endpoints in the application. Additionally, as a part of the training, downloading a file from server and sending a file to server have been implemented in the program.
+The purpose of the project was to create a web api which enables CRUD (create, read, update, delete) operations for restaurants and their lists of dishes. The program includes user registration and log-in, handling an authentication process by using JWT token (JSON Web Token) in this way. Every user is authorized based on its role or custom policy in order to check its privileges to specific endpoints in the application. Additionally, as a part of the training, downloading a file from the server and sending a file to the server have been implemented in the program.
 
 The project has been created based on practical course on Udemy platform in order to understand the principle of operation of every web application and what elements it consists of. The important aspect of learning was integration of the program with database by using Entity Framework Core.
 
@@ -46,22 +46,22 @@ The project has been created based on practical course on Udemy platform in orde
 # :gear: Features
 - CRUD operations
   - Restaurants
-     - reading of a restaurant by using ID (`GET /api/restaurant/{id}`)
-     - reading of all restaurants (`GET /api/restaurant`)
-     - creating of a new restaurant (`POST /api/restaurant`)
-     - updating of a restaurant by using ID (`PUT /api/restaurant/{id}`)
-     - deleting of a restaurant by using ID (`DELETE /api/restaurant/{id}`)
+     - reading a restaurant by using ID (`GET /api/restaurant/{id}`)
+     - reading all restaurants (`GET /api/restaurant`)
+     - creating a new restaurant (`POST /api/restaurant`)
+     - updating a restaurant by using ID (`PUT /api/restaurant/{id}`)
+     - deleting a restaurant by using ID (`DELETE /api/restaurant/{id}`)
   - Dishes
-     - reading of a dish by using ID for specific restaurant (`GET /api/restaurant/{restaurantId}/dish/{dishId}`)
-     - reading of all dishes for specific restaurant (`GET /api/restaurant/{restaurantId}/dish`)
-     - creating of a new dish for specific restaurant (`POST /api/restaurant/{restaurantId}/dish`)
-     - deleting of a dish by using ID for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish/{dishId}`)
-     - deleting of all dishes for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish`)
+     - reading a dish by using ID for specific restaurant (`GET /api/restaurant/{restaurantId}/dish/{dishId}`)
+     - reading all dishes for specific restaurant (`GET /api/restaurant/{restaurantId}/dish`)
+     - creating a new dish for specific restaurant (`POST /api/restaurant/{restaurantId}/dish`)
+     - deleting a dish by using ID for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish/{dishId}`)
+     - deleting all dishes for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish`)
 - User Authentication
    - Account
-     - creating of a new account (`POST /api/account/register`)
-     - logging in to the account (`POST /api/account/login`)
-     - returning of JWT if user login is successful
+     - creating a new account (`POST /api/account/register`)
+     - logging into account (`POST /api/account/login`)
+     - returning a JWT if user login is successful
 - User Authorization
    - authorization based on user role
      - access to the endpoint `POST /api/restaurant` for users with roles such as Admin or Manager
@@ -73,11 +73,11 @@ The project has been created based on practical course on Udemy platform in orde
 - Pagination mechanism for the endpoint `GET /api/restaurant` 
 - Files handling
    - Files
-      - downloading a file from server (`GET /api/file`)
-      - sending a file to server (`POST /api/file`)
+      - downloading a file from the server (`GET /api/file`)
+      - sending a file to the server (`POST /api/file`)
       - response caching for the endpoint `GET /api/file`
          - the cache duration is set on 120 seconds (2 minutes)
          - the server sends a new response when the file name is changed
 # :camera_flash: Screenshots
-
+<img src="./Screenshots/IMAGE_1.PNG">
 # :rocket: Setup
