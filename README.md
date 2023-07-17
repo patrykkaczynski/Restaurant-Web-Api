@@ -90,4 +90,4 @@ The project has been created based on practical course on Udemy platform in orde
 5. Rebuild and run the application
 
 # :handshake: Acknowledgements
-This project has been created based on ASP.NET Core REST Web API course from Udemy platform ([link](https://www.udemy.com/course/praktyczny-kurs-aspnet-core-rest-web-api-od-podstaw/). @jakubkozera
+This project has been created based on ASP.NET Core REST Web API course from Udemy platform ([link](https://www.udemy.com/course/praktyczny-kurs-aspnet-core-rest-web-api-od-podstaw/).
