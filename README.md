@@ -83,5 +83,11 @@ The project has been created based on practical course on Udemy platform in orde
 ![Swagger](Screenshots/IMAGE_1.png)
 
 # :rocket: Setup
+1. Download the solution using `git clone https://github.com/patrykkaczynski/Restaurant-Web-Api.git` command
+2. Enter your database connection string in the ConnectionStrings.RestaurantApi section for appsettings.json file (use MS SQL Server)
+3. Install EF Core CLI using `dotnet tool install --global dotnet-ef` command
+4. Apply migrations using `dotnet ef database update -s ../RestaurantAPI` command
+5. Rebuild and run the application
 
 # :handshake: Acknowledgements
+This project has been created based on ASP.NET Core REST Web API course from Udemy platform ([link](https://www.udemy.com/course/praktyczny-kurs-aspnet-core-rest-web-api-od-podstaw/). @jakubkozera
