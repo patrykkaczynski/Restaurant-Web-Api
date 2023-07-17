@@ -44,7 +44,11 @@ The project has been created based on practical course on Udemy platform in orde
 
 
 # :gear: Features
-
+- CRUD operations
+  - Restaurants
+     - Get restaurant by ID
+     - Get all restaurants
+  
 # :camera_flash: Screenshots
 
 # :rocket: Setup
