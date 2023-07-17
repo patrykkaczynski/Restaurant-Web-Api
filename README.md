@@ -19,7 +19,8 @@
 [PACKAGES USED](#packagepackages-used) • 
 [FEATURES](#gear-features) • 
 [SCREENSHOTS](#camera_flash-screenshots) • 
-[SETUP](#rocket-setup)**
+[SETUP](#rocket-setup) •
+[ACKNOWLEDGEMENTS]**
 </div>
 <br />
 
@@ -82,3 +83,5 @@ The project has been created based on practical course on Udemy platform in orde
 ![Swagger](Screenshots/IMAGE_1.png)
 
 # :rocket: Setup
+
+# :handshake: Acknowledgements
