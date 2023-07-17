@@ -79,5 +79,5 @@ The project has been created based on practical course on Udemy platform in orde
          - the cache duration is set on 120 seconds (2 minutes)
          - the server sends a new response when the file name is changed
 # :camera_flash: Screenshots
-[Swagger](Screenshots/image_1.png)
+![Swagger](Screenshots/image_1.png)
 # :rocket: Setup
