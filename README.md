@@ -46,7 +46,7 @@ The project has been created based on practical course on Udemy platform in orde
 # :gear: Features
 - CRUD operations
   - Restaurants
-     - Get restaurant by ID
+     - Get restaurant by ID (`GET /api/restaurant/{id}`)
      - Get all restaurants
   
 # :camera_flash: Screenshots
