@@ -20,7 +20,7 @@
 [FEATURES](#gear-features) • 
 [SCREENSHOTS](#camera_flash-screenshots) • 
 [SETUP](#rocket-setup) •
-[ACKNOWLEDGEMENTS]**
+[ACKNOWLEDGEMENTS](#handshake-acknowledgements)**
 </div>
 <br />
 
