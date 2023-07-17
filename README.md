@@ -46,9 +46,18 @@ The project has been created based on practical course on Udemy platform in orde
 # :gear: Features
 - CRUD operations
   - Restaurants
-     - Get restaurant by ID (`GET /api/restaurant/{id}`)
-     - Get all restaurants
-  
+     - reading of a restaurant by using ID (`GET /api/restaurant/{id}`)
+     - reading of all restaurants (`GET /api/restaurant`)
+     - creating of a new restaurant (`POST /api/restaurant`)
+     - updating of a restaurant by using ID (`PUT /api/restaurant/{id}`)
+     - deleting of a restaurant by using ID (`DELETE /api/restaurant/{id}`)
+  - Dishes
+     - reading of a dish by using ID for specific restaurant (`GET /api/restaurant/{restaurantId}/dish/{dishId}`)
+     - reading of all dishes for specific restaurant (`GET /api/restaurant/{restaurantId}/dish`)
+     - creating of a new dish for specific restaurant (`POST /api/restaurant/{restaurantId}/dish`)
+     - deleting of a dish by using ID for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish/{dishId}`)
+     - deleting of all dishes for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish`)
+       
 # :camera_flash: Screenshots
 
 # :rocket: Setup
