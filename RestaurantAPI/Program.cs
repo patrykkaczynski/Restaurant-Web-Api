@@ -62,7 +62,7 @@ builder.Services.AddAuthorization(options =>
     #endregion
 
     // Policy which requires to add nationality during user registration with specified nationality name
-    options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish"));
+    options.AddPolicy("HasNationality", builder => builder.RequireClaim("Nationality", "German", "Polish", "English"));
 
     // Custom Policy for Age
     options.AddPolicy("Atleast20", builder => builder.AddRequirements(new MinimumAgeRequirement(20)));

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.StaticFiles;
 
 namespace RestaurantAPI.Controllers
 {
-    [Route("file")]
+    [Route("api/file")]
     //[Authorize]
     public class FileController : ControllerBase
     {

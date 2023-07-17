@@ -36,6 +36,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "Atleast20")]
         public async Task<ActionResult> Delete([FromRoute] int id)
         {
             await _restaurantService.DeleteAsync(id);
@@ -55,8 +56,6 @@ namespace RestaurantAPI.Controllers
 
         [HttpGet]
         [Authorize(Policy = "CreatedAtleast2Restaurants")]
-        //[Authorize(Policy = "Atleast20")]
-        //[Authorize(Policy = "HasNationality")]
         public async Task<ActionResult<IEnumerable<RestaurantDto>>> GetAll([FromQuery]RestaurantQuery query)
         {
             var restaurantDtos = await _restaurantService.GetAllAsync(query);
@@ -65,7 +64,7 @@ namespace RestaurantAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        [AllowAnonymous]
+        [Authorize(Policy = "HasNationality")]
         public async Task<ActionResult<RestaurantDto>> Get([FromRoute] int id)
         {
             var restaurant = await _restaurantService.GetByIdAsync(id);
