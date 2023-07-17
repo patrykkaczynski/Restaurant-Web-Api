@@ -57,7 +57,27 @@ The project has been created based on practical course on Udemy platform in orde
      - creating of a new dish for specific restaurant (`POST /api/restaurant/{restaurantId}/dish`)
      - deleting of a dish by using ID for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish/{dishId}`)
      - deleting of all dishes for specific restaurant (`DELETE /api/restaurant/{restaurantId}/dish`)
-       
+- User Authentication
+   - Account
+     - creating of a new account (`POST /api/account/register`)
+     - logging in to the account (`POST /api/account/login`)
+     - returning of JWT if user login is successful
+- User Authorization
+   - authorization based on user role
+     - access to the endpoint `POST /api/restaurant` for users with roles such as Admin or Manager
+   - authorization based on claim value
+     - access to the endpoint `GET /api/restaurant/{id}` for users with nationalities such as German, Polish, English
+   - custom authorization policy
+     - access to the endpoint `DELETE /api/restaurant/{id}` for users who are at least 20 years old
+     - access to the endpoint `GET /api/restaurant` for users who created at least 2 restaurants
+- Pagination mechanism for the endpoint `GET /api/restaurant` 
+- Files handling
+   - Files
+      - downloading a file from server (`GET /api/file`)
+      - sending a file to server (`POST /api/file`)
+      - response caching for the endpoint `GET /api/file`
+         - the cache duration is set on 120 seconds (2 minutes)
+         - the server sends a new response when the file name is changed
 # :camera_flash: Screenshots
 
 # :rocket: Setup
